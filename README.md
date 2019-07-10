@@ -6,7 +6,7 @@ Test App to download and parse JSON from an API and display inside a tableView i
 
 Calls were asynchronous to ensure that the UI did not lock up while subsequent data was requested. (page 2, page 3 etc)
 
-(IMG_0055.png?raw=true)
+![Screenshot](IMG_0055.png)
 
 ### Skills
 - API / JSON
