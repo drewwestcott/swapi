@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TSv-dk-QMj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,29 +15,29 @@
             <objects>
                 <viewController title="Star Wars" id="BYZ-38-t0r" customClass="ViewController" customModule="StarWarsAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KrH-TR-gwE">
-                                <rect key="frame" x="20" y="94" width="560" height="29"/>
+                                <rect key="frame" x="16" y="94" width="343" height="29"/>
                                 <segments>
                                     <segment title="New Hope"/>
                                     <segment title="Empire"/>
                                     <segment title="Jedi"/>
                                 </segments>
                                 <connections>
-                                    <action selector="filmTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="6wk-Kq-Lij"/>
+                                    <action selector="filmChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="UjW-q4-x0d"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XZP-5C-0JY">
-                                <rect key="frame" x="0.0" y="152" width="600" height="448"/>
+                                <rect key="frame" x="0.0" y="152" width="375" height="515"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonCell" textLabel="79S-d5-gKz" detailTextLabel="HKv-UU-1hb" style="IBUITableViewCellStyleValue1" id="IBj-Om-XFv">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IBj-Om-XFv" id="lif-01-nak">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="79S-d5-gKz">
@@ -44,7 +48,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HKv-UU-1hb">
-                                                    <rect key="frame" x="541" y="12" width="44" height="20.5"/>
+                                                    <rect key="frame" x="316" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -56,7 +60,7 @@
                                 </prototypes>
                             </tableView>
                             <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RhD-lT-rr5">
-                                <rect key="frame" x="560" y="69" width="20" height="20"/>
+                                <rect key="frame" x="339" y="69" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="5RV-af-qSd"/>
                                     <constraint firstAttribute="height" constant="20" id="pa2-Cc-kMZ"/>
@@ -82,7 +86,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="RhD-lT-rr5" id="whg-Gb-JrU"/>
                         <outlet property="filmSegmentedControl" destination="KrH-TR-gwE" id="6TJ-kr-oSR"/>
-                        <outlet property="personTableView" destination="XZP-5C-0JY" id="hOc-1x-5TZ"/>
+                        <outlet property="tableView" destination="XZP-5C-0JY" id="hOc-1x-5TZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
